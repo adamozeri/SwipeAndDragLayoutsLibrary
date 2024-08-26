@@ -1,4 +1,4 @@
-package com.example.layoutslibrary;
+package com.example.swipeanddraglayoutslibrary;
 
 import org.junit.Test;
 

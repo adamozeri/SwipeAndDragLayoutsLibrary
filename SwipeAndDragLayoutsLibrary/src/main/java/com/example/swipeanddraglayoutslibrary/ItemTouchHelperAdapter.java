@@ -1,4 +1,4 @@
-package com.example.layoutslibrary;
+package com.example.swipeanddraglayoutslibrary;
 
 public interface ItemTouchHelperAdapter {
     void onItemMove(int fromPosition, int toPosition);

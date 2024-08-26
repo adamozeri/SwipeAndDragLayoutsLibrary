@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SwipeLib"
 include(":app")
-include(":LayoutsLibrary")
+include(":SwipeAndDragLayoutsLibrary")

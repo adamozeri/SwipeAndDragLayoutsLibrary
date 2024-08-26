@@ -1,4 +1,4 @@
-package com.example.layoutslibrary;
+package com.example.swipeanddraglayoutslibrary;
 
 import android.graphics.Canvas;
 import android.view.View;

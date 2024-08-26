@@ -1,4 +1,4 @@
-package com.example.layoutslibrary;
+package com.example.swipeanddraglayoutslibrary;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;

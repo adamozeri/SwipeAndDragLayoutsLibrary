@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.layoutslibrary.CustomizableCardAdapter;
-import com.example.layoutslibrary.ScalingItemDecoration;
+import com.example.swipeanddraglayoutslibrary.CustomizableCardAdapter;
+import com.example.swipeanddraglayoutslibrary.ScalingItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.layoutslibrary.CustomizableCardAdapter;
-import com.example.layoutslibrary.DragAndSwipeCallback;
-import com.example.layoutslibrary.SwipeListener;
+import com.example.swipeanddraglayoutslibrary.CustomizableCardAdapter;
+import com.example.swipeanddraglayoutslibrary.DragAndSwipeCallback;
+import com.example.swipeanddraglayoutslibrary.SwipeListener;
 
 import java.util.ArrayList;
 import java.util.List;
