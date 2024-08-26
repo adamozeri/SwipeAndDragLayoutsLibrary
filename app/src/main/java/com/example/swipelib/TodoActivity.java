@@ -52,7 +52,7 @@ public class TodoActivity extends AppCompatActivity implements SwipeListener {
                 }
         );
         recyclerView.setAdapter(adapter);
-        DragAndSwipeCallback callback = new DragAndSwipeCallback(adapter, this, false, true, true, false, false, false);
+        DragAndSwipeCallback callback = new DragAndSwipeCallback(adapter, this, false, true, true, true, false, false);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
     }
