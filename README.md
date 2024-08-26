@@ -1,6 +1,6 @@
 # Swipe and Drag Layouts Library
 ### Overview
-The Layouts Library for Android provides a customizable and flexible solution for implementing swipeable and draggable card stacks in your app. It includes functionality for dragging items to reorder and swiping items to remove them, as well as customizable scaling and stacking behavior.
+The Swipe and Drag Layouts Library for Android provides a customizable and flexible solution for implementing swipeable and draggable card stacks in your app. It includes functionality for dragging items to reorder and swiping items to remove them, as well as customizable scaling and stacking behavior.
 
 ### Components
 #### 1. CustomizableCardAdapter
