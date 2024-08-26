@@ -88,10 +88,28 @@ public interface SwipeListener {
 ```
 
 ### Usage
-##### Step 1: Add Dependency
-Add the library to your project’s dependencies. (Provide your repository and version details if hosted.)
 
-##### Step 2: Set Up Adapter
+##### Step 1: Add Maven Repository
+Add the following code to the dependencyResolutionManagement section in your project's settings.gradle file:
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+##### Step 2: Add Dependency
+Add the library to your project’s dependencies
+```groovy
+ dependencies {
+    implementation 'com.github.adamozeri:SwipeAndDragLayoutsLibrary:Tag'
+}
+```
+
+##### Step 3: Set Up Adapter
 Create and configure your adapter with a layout resource and binding callback.
 
 ```java
@@ -104,7 +122,7 @@ CustomizableCardAdapter<MyItem> adapter = new CustomizableCardAdapter<>(
 );
 ```
 
-##### Step 3: Configure RecyclerView
+##### Step 4: Configure RecyclerView
 Set up your RecyclerView with the StackLayoutManager and the CustomizableCardAdapter.
 
 ```java
@@ -114,7 +132,7 @@ recyclerView.setLayoutManager(layoutManager);
 recyclerView.setAdapter(adapter);
 ```
 
-##### Step 4: Add Drag and Swipe Callback
+##### Step 5: Add Drag and Swipe Callback
 Create and attach the DragAndSwipeCallback to your RecyclerView.
 
 ```java
@@ -135,7 +153,7 @@ DragAndSwipeCallback callback = new DragAndSwipeCallback(
 ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
 touchHelper.attachToRecyclerView(recyclerView);
 ```
-##### Step 5: Add Scaling Decoration
+##### Step 6: Add Scaling Decoration
 Optionally, add ScalingItemDecoration for scaling effects.
 
 ```java
