@@ -1,9 +1,10 @@
 package com.example.swipeablecardstacklibrary;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CombinedCallback extends ItemTouchHelper.Callback {
+public class DragAndSwipeCallback extends ItemTouchHelper.Callback {
 
     private final CustomizableCardAdapter adapter;
     private final SwipeListener swipeListener;
@@ -14,10 +15,10 @@ public class CombinedCallback extends ItemTouchHelper.Callback {
     private final boolean enableUpSwipe;
     private final boolean enableDownSwipe;
 
-    public CombinedCallback(CustomizableCardAdapter adapter, SwipeListener swipeListener,
-                            boolean dragEnabled, boolean swipeEnabled,
-                            boolean enableLeftSwipe, boolean enableRightSwipe,
-                            boolean enableUpSwipe, boolean enableDownSwipe) {
+    public DragAndSwipeCallback(CustomizableCardAdapter adapter, SwipeListener swipeListener,
+                                boolean dragEnabled, boolean swipeEnabled,
+                                boolean enableLeftSwipe, boolean enableRightSwipe,
+                                boolean enableUpSwipe, boolean enableDownSwipe) {
         this.adapter = adapter;
         this.swipeListener = swipeListener;
         this.dragEnabled = dragEnabled;
@@ -29,7 +30,7 @@ public class CombinedCallback extends ItemTouchHelper.Callback {
     }
 
     @Override
-    public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+    public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
         int dragFlags = dragEnabled ? ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT : 0;
         int swipeFlags = swipeEnabled ?
                 (enableLeftSwipe ? ItemTouchHelper.LEFT : 0) |
@@ -40,7 +41,7 @@ public class CombinedCallback extends ItemTouchHelper.Callback {
     }
 
     @Override
-    public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+    public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
         if (dragEnabled) {
             int fromPosition = viewHolder.getAdapterPosition();
             int toPosition = target.getAdapterPosition();
@@ -51,7 +52,7 @@ public class CombinedCallback extends ItemTouchHelper.Callback {
     }
 
     @Override
-    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
         if (swipeEnabled) {
             int position = viewHolder.getAdapterPosition();
             adapter.removeItem(position);

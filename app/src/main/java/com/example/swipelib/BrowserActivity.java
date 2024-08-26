@@ -3,7 +3,6 @@ package com.example.swipelib;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -11,15 +10,10 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.swipeablecardstacklibrary.CombinedCallback;
+import com.example.swipeablecardstacklibrary.DragAndSwipeCallback;
 import com.example.swipeablecardstacklibrary.CustomizableCardAdapter;
-import com.example.swipeablecardstacklibrary.DragAndDropCallback;
-import com.example.swipeablecardstacklibrary.StackLayoutManager;
-import com.example.swipeablecardstacklibrary.SwipeCardCallback;
-import com.example.swipeablecardstacklibrary.SwipeListener;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class BrowserActivity extends AppCompatActivity {
@@ -53,10 +47,10 @@ public class BrowserActivity extends AppCompatActivity {
         );
         recyclerView.setAdapter(adapter);
 
-        CombinedCallback combinedCallback = new CombinedCallback(adapter, (position, direction) -> {
+        DragAndSwipeCallback dragAndSwipeCallback = new DragAndSwipeCallback(adapter, (position, direction) -> {
 
         }, true, true, true, true, false, false);
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(combinedCallback);
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragAndSwipeCallback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
     }
 }

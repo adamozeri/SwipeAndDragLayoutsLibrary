@@ -4,7 +4,6 @@ import android.graphics.Paint;
 import android.os.Bundle;
 
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.swipeablecardstacklibrary.CustomizableCardAdapter;
-import com.example.swipeablecardstacklibrary.SwipeCardCallback;
+import com.example.swipeablecardstacklibrary.DragAndSwipeCallback;
 import com.example.swipeablecardstacklibrary.SwipeListener;
 
 import java.util.ArrayList;
@@ -45,7 +44,7 @@ public class TodoActivity extends AppCompatActivity implements SwipeListener {
                     todoCardTitle.setText(task);
 
                     todoCheckBox.setOnCheckedChangeListener((compoundButton, b) -> {
-                        if(b)
+                        if (b)
                             todoCardTitle.setPaintFlags(todoCardTitle.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                         else
                             todoCardTitle.setPaintFlags(todoCardTitle.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
@@ -53,7 +52,7 @@ public class TodoActivity extends AppCompatActivity implements SwipeListener {
                 }
         );
         recyclerView.setAdapter(adapter);
-        SwipeCardCallback callback = new SwipeCardCallback(adapter, this, true, true, false, false);
+        DragAndSwipeCallback callback = new DragAndSwipeCallback(adapter, this, false, true, true, false, false, false);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
     }

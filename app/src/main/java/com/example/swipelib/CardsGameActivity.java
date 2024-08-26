@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.swipeablecardstacklibrary.CombinedCallback;
+import com.example.swipeablecardstacklibrary.DragAndSwipeCallback;
 import com.example.swipeablecardstacklibrary.CustomizableCardAdapter;
 import com.example.swipeablecardstacklibrary.StackLayoutManager;
 import com.example.swipeablecardstacklibrary.SwipeListener;
@@ -40,7 +40,7 @@ public class CardsGameActivity extends AppCompatActivity implements SwipeListene
         });
         recyclerView.setAdapter(adapter);
 
-        CombinedCallback callback = new CombinedCallback(adapter, this, false, true, false, false, true, true);
+        DragAndSwipeCallback callback = new DragAndSwipeCallback(adapter, this, false, true, false, false, true, true);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
     }

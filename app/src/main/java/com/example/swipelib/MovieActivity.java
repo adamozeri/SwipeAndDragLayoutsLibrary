@@ -10,10 +10,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.swipeablecardstacklibrary.CombinedCallback;
+import com.example.swipeablecardstacklibrary.DragAndSwipeCallback;
 import com.example.swipeablecardstacklibrary.CustomizableCardAdapter;
 import com.example.swipeablecardstacklibrary.StackLayoutManager;
-import com.example.swipeablecardstacklibrary.SwipeCardCallback;
 import com.example.swipeablecardstacklibrary.SwipeListener;
 
 import java.util.ArrayList;
@@ -70,7 +69,7 @@ public class MovieActivity extends AppCompatActivity implements SwipeListener {
         );
         recyclerView.setAdapter(adapter);
 
-        CombinedCallback callback = new CombinedCallback(adapter, this, false, true, true, true, true, true);
+        DragAndSwipeCallback callback = new DragAndSwipeCallback(adapter, this, false, true, true, true, true, true);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
     }

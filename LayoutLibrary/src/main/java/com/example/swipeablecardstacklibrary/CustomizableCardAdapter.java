@@ -46,10 +46,9 @@ public class CustomizableCardAdapter<T> extends RecyclerView.Adapter<Customizabl
 //    }
 
     @Override
-    public boolean onItemMove(int fromPosition, int toPosition) {
+    public void onItemMove(int fromPosition, int toPosition) {
         Collections.swap(items, fromPosition, toPosition);
         notifyItemMoved(fromPosition, toPosition);
-        return true;
     }
 
     @Override
