@@ -1,4 +1,4 @@
-package com.example.swipeablecardstacklibrary;
+package com.example.layoutslibrary;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;

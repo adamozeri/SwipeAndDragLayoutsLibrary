@@ -1,4 +1,4 @@
-package com.example.swipeablecardstacklibrary;
+package com.example.layoutslibrary;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,10 +40,6 @@ public class CustomizableCardAdapter<T> extends RecyclerView.Adapter<Customizabl
         return items.size();
     }
 
-//    public void removeItem(int position) {
-//        items.remove(position);
-//        notifyItemRemoved(position);
-//    }
 
     @Override
     public void onItemMove(int fromPosition, int toPosition) {

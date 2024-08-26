@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.swipeablecardstacklibrary.DragAndSwipeCallback;
-import com.example.swipeablecardstacklibrary.CustomizableCardAdapter;
-import com.example.swipeablecardstacklibrary.StackLayoutManager;
-import com.example.swipeablecardstacklibrary.SwipeListener;
+import com.example.layoutslibrary.DragAndSwipeCallback;
+import com.example.layoutslibrary.CustomizableCardAdapter;
+import com.example.layoutslibrary.StackLayoutManager;
+import com.example.layoutslibrary.SwipeListener;
 
 import java.util.ArrayList;
 import java.util.List;
